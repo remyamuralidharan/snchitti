@@ -1,0 +1,2 @@
+module ChittiDetailsHelper
+end

@@ -1,0 +1,36 @@
+<%= form_for(@user, :url => users_path, method: :post) do |f|%>
+	<table>
+		<tr>
+			<td><label>Name: </label></td>
+			<td><%=f.text_field :name%></td>
+		</tr>
+		<tr>
+			<td><label>House Name: </label></td>
+			<td><%=f.text_field :house_name%></td>
+		</tr>
+		<tr>
+			<td><label>Place: </label></td>
+			<td><%=f.text_field :place%></td>
+		</tr>
+		<tr>
+			<td><label>City: </label></td>
+			<td><%=f.text_field :city%></td>
+		</tr>
+		<tr>
+			<td><label>Mobile No: </label></td>
+			<td><%=f.text_field :mob_no%></td>
+		</tr>
+		<tr>
+			<td><label>Email Id: </label></td>
+			<td><%=f.text_field :email%></td>
+		</tr>
+		<tr>
+			<td><label>Password: </label></td>
+			<td><%=f.text_field :password%></td>
+		</tr>
+		<tr>
+			<td></td>	
+			<td><%= f.submit "Add User"%></td>
+		</tr>
+	</table>
+<%end%>

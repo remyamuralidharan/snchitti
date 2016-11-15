@@ -1,0 +1,21 @@
+<table border = 1>
+	<th>Name</th>
+	<th>Email</th>
+	<th>Phone</th>
+	<th>CurrentInstallmentNo</th>
+	<th>TotalPaid</th>
+	<th>RemainingAmount</th>
+	<%unless @chitti_users.blank?%>
+		<%@chitti_users.each do |chitti_user| %>
+			<tr>
+				<td><%=chitti_user.user.name%></td>
+				<td><%=chitti_user.user.email%></td>
+				<td><%=chitti_user.user.mob_no%></td>
+				<td></td>
+				<td></td>	
+				<td></td>	
+			</tr>
+		<%end%>
+	<%end%>
+</table>
+<%=link_to "Logout", destroy_user_session_path, :method => :delete%>

@@ -1,0 +1,36 @@
+<center><h2> Add Chitti Details </h2></center>
+<%if @errors.present?%>
+  <error><%=@errors%></error>
+<%end%>
+<%= form_for(@chitti_detail, :url => chitti_details_path) do |f|%>
+	<table align = "center">
+		<tr>
+			<td><label>Chitti No: </label></td>
+			<td> <%= f.text_field :chitti_no %></td>
+		</tr>
+		<tr>
+			<td><label>Chitti Name: </label></td>
+			<td> <%= f.text_field :chitti_name %></td>
+		</tr>
+		<tr>
+			<td><label>Amount: </label></td>
+			<td> <%= f.text_field :amount %></td>
+		</tr>
+		<tr>
+			<td><label>Validity: </label></td>
+			<td> <%= f.text_field :validity %></td>
+		</tr>
+		<tr>
+			<td><label>Recurr Type : </label></td>
+			<td> <%= f.text_field :recurr_type %></td>
+		</tr>
+		<tr>
+			<td><label>Amount to Pay : </label></td>
+			<td> <%= f.text_field :pay_amount %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><%=f.submit "Add Details"%></td>
+		</tr>
+	</table>	
+<%end%>

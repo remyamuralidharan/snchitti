@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chitti_no: 1
+  chitti_name: MyText
+  amount: 1
+  validity: 1
+  recurr_type: MyText
+  pay_amount: 1
+
+two:
+  chitti_no: 1
+  chitti_name: MyText
+  amount: 1
+  validity: 1
+  recurr_type: MyText
+  pay_amount: 1

@@ -1,0 +1,3 @@
+ruby version - 2.2.0
+rails - 4.2.0
+gemset - rvm use 2.2.0@snchitti
