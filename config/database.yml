@@ -25,9 +25,9 @@
 #   database: db/production.sqlite3
 
 development:
-  adapter: mysql2
+  adapter: postgresql
   host: localhost
-  database: snchitti_dev
-  username: root
-  password: qbtech
+  database: snchitti_dev_latest
+  username: postgres
+  password: postgres
 
