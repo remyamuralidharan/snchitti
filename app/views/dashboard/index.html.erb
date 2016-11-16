@@ -3,7 +3,6 @@
 	<%=submit_tag "search"%>
 <%end%>
 </br>
-</br>
 <%unless @chitti_details.blank?%>
  	<table border = 1>
 		<th>Chitti No</th>
@@ -14,18 +13,19 @@
 		<th>Amount To Pay</th>
 		<th></th>	
 		<%@chitti_details.each do |detail|%>
-		<tr>
-			<td><%=detail.chitti_no%></td>
-			<td><%=detail.chitti_name%></td>	
-			<td><%=detail.amount%></td>	
-			<td><%=detail.validity%></td>	
-			<td><%=detail.recurr_type%></td>	
-			<td><%=detail.pay_amount%></td>	
-			<td><%=link_to "GET USER DETAILS",chitti_users_path(id: detail.id)%></td>
-			<td><%=link_to "Add New Chitti",new_chitti_detail_path%></td>
-		</tr>
+			<tr>
+				<td><%=detail.chitti_no%></td>
+				<td><%=detail.chitti_name%></td>	
+				<td><%=detail.amount%></td>	
+				<td><%=detail.validity%></td>	
+				<td><%=detail.recurr_type%></td>	
+				<td><%=detail.pay_amount%></td>	
+				<td><%=link_to "GET USER DETAILS",chitti_users_path(id: detail.id)%></td>			
+			</tr>
 		<%end%>
 	</table>
 <%end%>
 </br>
+<%=link_to "Add New Chitti",new_chitti_detail_path%></br>
+<%=link_to "Home",root_path%></br>
 <%=link_to "Logout", destroy_user_session_path, :method => :delete%>

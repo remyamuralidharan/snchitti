@@ -1,5 +1,9 @@
+<%if flash[:notice].present?%>
+	<%=flash[:notice]%>
+<%end%>
 <%= form_for(@user, :url => users_path, method: :post) do |f|%>
-	<table>
+	<table align = center>
+		<h2 align = center>Add New Customer</h2>
 		<tr>
 			<td><label>Name: </label></td>
 			<td><%=f.text_field :name%></td>
@@ -34,3 +38,8 @@
 		</tr>
 	</table>
 <%end%>
+</br>
+<div align = "center">
+	<%=link_to "Home",root_path%></br>
+	<%=link_to "Logout",destroy_user_session_path,method: :delete%>
+</div>

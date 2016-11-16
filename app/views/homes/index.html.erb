@@ -1,3 +1,6 @@
+<%if flash[:error].present?%>
+<p><%=flash[:error]%></p>
+<%end%>
 <%=link_to "Add New Chitti",new_chitti_detail_path%></br>
 <%=link_to "Add New Customer",new_user_path%></br>
 <%=link_to "Add Chitti Customer"%></br>

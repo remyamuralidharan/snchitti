@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users,:controllers => {:registrations => "users"}
   root to: 'homes#index'
   resources :dashboard, :only => [:index] 
   resources :chitti_users, :only => [:index]

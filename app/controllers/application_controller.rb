@@ -9,14 +9,6 @@ class ApplicationController < ActionController::Base
 		new_user_session_path
 	end
 	def after_sign_in_path_for(resource)
-		# if current_user
-		# 	get_landing_page_path
-		# else
-		# 	new_user_session_path
-	 #    end
 	    root_path
 	end
-	# def get_landing_page_path
-	# 	root_path
-	# end
 end
