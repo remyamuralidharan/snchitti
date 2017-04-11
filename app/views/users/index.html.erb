@@ -1,0 +1,22 @@
+<%unless @users.blank?%>
+	<table border = 1>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>	
+			<th>House Name</th>
+			<th>Place</th>
+			<th>City</th>
+			<th>Mobile No:</th>
+		</tr>
+		<%@users.each do |user| %>
+			<tr>
+				<td><%=user.name%></td>
+				<td><%=user.email%></td>
+				<td><%=user.house_name%></td>
+				<td><%=user.place%></td>
+				<td><%=user.city%></td>
+				<td><%=user.mob_no%></td>	
+			</tr>	
+		<%end%>
+	</table>
+<%end%>

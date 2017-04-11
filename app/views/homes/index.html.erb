@@ -1,8 +1,24 @@
-<%if flash[:error].present?%>
-<p><%=flash[:error]%></p>
-<%end%>
-<%=link_to "Add New Chitti",new_chitti_detail_path%></br>
-<%=link_to "Add New Customer",new_user_path%></br>
-<%=link_to "Add Chitti Customer"%></br>
+<html>
+	<head>
+		<%if flash[:error].present?%>
+			<p><%=flash[:error]%></p>
+		<%end%>
 
-<%=link_to "Logout", destroy_user_session_path, :method => :delete%>
+		<h2 align = center><%=image_tag('/assets/logo.png', width:"36", height:"35",:class => "img_preview")%></h2>
+	</head>
+	<body bgcolor = "#9e68bb ">
+		<h4 align = right><%=link_to "Logout", destroy_user_session_path, :method => :delete%></h4>
+		<marquee attribute_name="attribute_value"....more attributes">
+			<font color = "brown">Any good business person applies financial discipline to everything they do !!</font>
+		</marquee>
+		</br>
+		</br>
+		</br>
+		<table align = center border = 1>
+<!-- 			<tr><td><%#= button_to "Add New Chitti", {action: "new", controller: "chitti_details", :method => "get"}, form_class: 'test_class_button' %></td></tr> -->
+			<tr><td><%=link_to "Add New Chitti",new_chitti_detail_path%></td></tr>
+			<tr><td><%=link_to "Add New Customer",new_user_path%></td></tr>
+			<tr><td><%=link_to "Add Chitti Customer",new_chitti_user_path%></td></tr>
+		</table>
+	</body>
+</html>

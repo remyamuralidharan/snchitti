@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
-  devise_for :users,:controllers => {:registrations => "users"}
-  root to: 'homes#index'
-  resources :dashboard, :only => [:index] 
-  resources :chitti_users, :only => [:index]
+  # get 'mail/index'
+  # get "/mail/send_message" => "mail#send_message", format: :json
+
+  devise_for :users, controllers: {:registrations => "users", :omniauth_callbacks => "omniauth_callbacks" }
+  # get 'homes#index'
+  root 'homes#index'
+  get 'authorize' => 'auth#gettoken'
+  resources :dashboard, :only => [:index]
+
+  get "/chitti_users/refresh_token_test" => "chitti_users#refresh_token_test"
+ resources :chitti_users
+  # , :only => [:index, :new, :create]
   resources :chitti_details, :only => [:new, :create]
   resources :users, :only => [:new,:create]
-
+  resources :homes, :only => [:index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

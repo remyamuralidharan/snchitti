@@ -1,0 +1,17 @@
+<%if flash[:notice].present? %>
+	<%= flash[:notice] %>
+<%end%>
+<%= form_for(@chitti_user, :url => chitti_users_path, method: :post) do |f| %>
+	<table align = center>
+		<tr>
+			<td>Select Chitti: </td>
+			<td><%= select_tag "chitti_detail_id", options_from_collection_for_select(@chitties, "id", "chitti_name")%></td>
+		</tr>
+		<tr>
+			<td>Select User: </td>
+			<td><%= select_tag "user_id", options_from_collection_for_select(@users, "id", "name")%></td>
+		</tr>
+		<tr><td></td><td><%= f.submit "Add User For Chitti"%></td></tr>
+
+	</table>
+<%end%>

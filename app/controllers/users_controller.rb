@@ -11,6 +11,13 @@ class UsersController < ApplicationController
 			redirect_to root_path, :flash => { :error => @user.errors.full_messages.to_sentence }
 		end
 	end
+	def index
+		@users = User.all
+	end
+
+	def oauth_failure
+		p "hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+	end
 
 	private
 	
